@@ -1,0 +1,14 @@
+{% extends 'pers_portf/base.html' %}
+{% block content %}
+{% load static %}
+
+<img src="{% static 'pers_portf/images.jpeg' %}" width="300"><br>
+{% for project in projects %}
+    {{ project }}<br>
+    {{ project.description }}<br>
+    <img src="{{ project.image.url }}" height=200><br>
+    {% if project.url %}
+        <a href="{{ project.url }}">Link</a>
+    {% endif %}
+{% endfor %}
+{% endblock content %}

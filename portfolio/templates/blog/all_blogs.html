@@ -1,0 +1,7 @@
+{% extends 'pers_portf/base.html' %}
+    {% block content %}
+    <h1>My blog</h1>
+    {% for blog in blogs %}
+        <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog }} - {{ blog.date }}</h2></a>
+    {% endfor %}
+{% endblock content %}
