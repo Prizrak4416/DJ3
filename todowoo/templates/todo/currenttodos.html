@@ -1,0 +1,11 @@
+{% extends "todo/base.html" %}
+{% block content %}
+    hi
+    <ul>
+        {% for todo in todos %}
+            <li>{{ todo.title }}</li>
+        {% endfor %}
+
+
+    </ul>
+{% endblock content %}
